@@ -49,18 +49,18 @@ In Openshift Operator hub, install AMQ Streams Operator with default configurati
 
 After, we need create a Kafka Cluster with Kafka Exporter Custom Resource, click on Installed Operators, click on AMQ Streams and in Kafka section, click on "Create Instance" 
 
-![](images/KafkaInstance.png)
-
-Change to Yaml view and apply a yaml file like this [kafka-cr.yaml](custom-resources/kafka/kafka-cr.yaml) in folder custom-resources/kafka: 
-
-![](images/KafkaYaml.png)
-
 Next, create the Kafka metrics ConfigMap based on the [kafka-metrics-cm.yaml](custom-resources/kafka/kafka-metrics-cm.yaml) file using the following commands:
 
 ```bash
 cd custom-resources/kafka
 oc apply -f kafka-metrics-cm.yaml
 ```
+
+![](images/KafkaInstance.png)
+
+Change to Yaml view and apply a yaml file like this [kafka-cr.yaml](custom-resources/kafka/kafka-cr.yaml) in folder custom-resources/kafka: 
+
+![](images/KafkaYaml.png)
 
 Now that we have a functional Kafka cluster, let's create the topic for use in our tests. To do this, go back to the 'Installed Operators' section of Openshift and click on the AMQ Streams Operator, then click on the 'Kafka Topic' section and click 'Create Instance'. Apply the YAML as shown below:
 
