@@ -20,7 +20,7 @@ export default function () {
         surname: 'ipsum',
     });
     const headers = { 'Content-Type': 'text/plain','Accept':'*/*' };
-    const res = http.post('http://camel-quarkus-kafka-api-producer-camel-quarkus-apps.apps.cluster-bwrbh.bwrbh.sandbox830.opentlc.com/produce', payload, { headers });
+    const res = http.post('http://camel-quarkus-kafka-api-producer-camel-teste-carga.apps.leribeir.vmware.tamlab.rdu2.redhat.com/produce', payload, { headers });
 
     check(res, {
         'Post status is 200': (r) => res.status === 200
